@@ -1,7 +1,7 @@
 var BlockChainInfo = (function(self, $) {
 
   function getJSONForPath(path, hollaback) {
-    var url = 'https://blockchain.info' + path;
+    var url = 'https://chain.so/api/v2' + path;
     $.ajax({
       type: 'GET',
       url: url,
@@ -21,7 +21,7 @@ var BlockChainInfo = (function(self, $) {
   };
 
   self.unspent = function(address, hollaback) {
-    var url = 'https://blockchain.info/unspent?active=' + address;
+    var url = 'https://chain.so/api/v2/get_tx_unspent/DOGE/' + address;
     $.ajax({
       type: 'GET',
       url: url,
@@ -41,7 +41,7 @@ var BlockChainInfo = (function(self, $) {
   };
 
   self.pushtx = function(tx, hollaback) {
-    var url = 'https://blockchain.info/pushtx?cors=true',
+    var url = 'https://dogechain.info/api/v1/pushtx',
         postData = { tx: tx };
 
     $.ajax({
@@ -75,7 +75,7 @@ var BlockChainInfo = (function(self, $) {
     self.reconnectAttempts = 5;
 
     self.connect = function() {
-      self.webSocket = new WebSocket('wss://ws.blockchain.info/inv');
+      self.webSocket = new WebSocket('ws://ws.dogechain.info/inv');
 
       self.webSocket.onopen = function(e) {
         self.isConnected = true;
@@ -134,7 +134,7 @@ var BlockChainInfo = (function(self, $) {
         for (var i=0; i<self.reconnectFailureCallbacks.length; i++) {
           self.reconnectFailureCallbacks[i].call();
         }
-        console.log('BlockChainInfo WebSocket Error: ', e);
+        console.log('Dogechain WebSocket Error: ', e);
       };
     }
 

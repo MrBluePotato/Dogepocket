@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #5b6366;
+  background-color: #f2ede0;
 }
 
 input[type="text"],
@@ -19,7 +19,7 @@ input[type="password"] {
 
 #balance-container,
 #button-container {
-  background-color: #2ecc71;
+  background-color: #3ba4da;
   color: white;
 }
 
@@ -33,7 +33,7 @@ input[type="password"] {
 }
 
 #button-container a {
-  color: #c7ffde;
+  color: #ffffff;
   padding: 0 5px;
 }
 
@@ -99,7 +99,7 @@ input[type="password"] {
 }
 
 .transaction-credit span.value {
-  color: #2ecc71;
+  color: #f6b442;
 }
 
 .transaction-credit span.value:before {
