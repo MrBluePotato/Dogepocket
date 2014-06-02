@@ -67,7 +67,7 @@
         var $inputTemplate = $template.find('.inputs-row-template').clone();
         $inputTemplate.removeClass('inputs-row-template');
         $inputTemplate.find('.inputs-address').text(input.addr);
-        $inputTemplate.find('.inputs-btc').text((input.value / 100000000).toFixed(8) + " BTC");
+        $inputTemplate.find('.inputs-btc').text((input.value / 100000000).toFixed(8) + " DOGE");
 
         $template.find('.transaction-inputs').prepend($inputTemplate);
         $inputTemplate.show();
@@ -81,7 +81,7 @@
         var $outputTemplate = $template.find('.outputs-row-template').clone();
         $outputTemplate.removeClass('outputs-row-template');
         $outputTemplate.find('.outputs-address').text(output.addr);
-        $outputTemplate.find('.outputs-btc').text((output.value / 100000000).toFixed(8) + " BTC");
+        $outputTemplate.find('.outputs-btc').text((output.value / 100000000).toFixed(8) + " DOGE");
 
         $template.find('.transaction-outputs').prepend($outputTemplate);
         $outputTemplate.show();
@@ -89,9 +89,9 @@
         outputsTotal += output.value;
       }
 
-      $template.find('.total-inputs-btc').text((inputsTotal / 100000000).toFixed(8) + " BTC");
-      $template.find('.total-outputs-btc').text((outputsTotal / 100000000).toFixed(8) + " BTC");
-      $template.find('.transaction-fee').text(parseFloat(((inputsTotal - outputsTotal) / 100000000).toFixed(8)) + " BTC");
+      $template.find('.total-inputs-btc').text((inputsTotal / 100000000).toFixed(8) + " DOGE");
+      $template.find('.total-outputs-btc').text((outputsTotal / 100000000).toFixed(8) + " DOGE");
+      $template.find('.transaction-fee').text(parseFloat(((inputsTotal - outputsTotal) / 100000000).toFixed(8)) + " DOGE");
 
       $template.formatTransaction();
 

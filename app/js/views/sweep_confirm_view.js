@@ -40,7 +40,7 @@
 
   SweepConfirmView.prototype.setBalance = function(balance) {
     if (balance || balance === 0) {
-      this.$container.find('.sweep-balance').text(balance.toFixed(8) + " BTC");
+      this.$container.find('.sweep-balance').text(balance.toFixed(8) + " DOGE");
     } else {
       this.$container.find('.sweep-balance').text('Unknown');
     }
@@ -71,11 +71,11 @@
     var netTransactionBTC = parseFloat(totalOutputValue.toFixed(8));
     var netTransactionUSD = (netTransactionBTC * parseFloat(conversionRate)).toFixed(2);
 
-    this.$container.find('.sweep-miner-fee').text(minerFee.toFixed(8) + " BTC");
-    this.$container.find('.sweep-total-btc').text(netTransactionBTC.toFixed(8) + " BTC");
+    this.$container.find('.sweep-miner-fee').text(minerFee.toFixed(8) + " DOGE");
+    this.$container.find('.sweep-total-btc').text(netTransactionBTC.toFixed(8) + " DOGE");
     this.$container.find('.sweep-total-usd').text('~ ' + netTransactionUSD + ' USD');
 
-    this.$summaryBTC.text(netTransactionBTC + ' BTC');
+    this.$summaryBTC.text(netTransactionBTC + ' DOGE');
     this.$summaryUSD.text('$' + netTransactionUSD);
   };
 

@@ -92,7 +92,7 @@
       $output.attr('id', '');
       $output.addClass('confirmation-output');
       $output.find('.confirmation-output-label').text(address);
-      $output.find('.confirmation-output-amount').text(output.amount.toFixed(8) + " BTC");
+      $output.find('.confirmation-output-amount').text(output.amount.toFixed(8) + " DOGE");
 
       this.$outputs.append($output);
       $output.show();
@@ -106,17 +106,17 @@
       $minerFee.attr('id', '');
       $minerFee.addClass('confirmation-output');
       $minerFee.find('.confirmation-output-label').text('Miner Fee');
-      $minerFee.find('.confirmation-output-amount').text(minerFee.toFixed(8) + " BTC");
+      $minerFee.find('.confirmation-output-amount').text(minerFee.toFixed(8) + " DOGE");
       this.$outputs.append($minerFee);
       $minerFee.show();
     }
     var netTransaction = parseFloat((totalOutputValue - changeAmount + minerFee).toFixed(8));
     var netTransactionUSD = '$' + (netTransaction * parseFloat(conversionRate)).toFixed(2);
-    this.$summaryBTC.text(netTransaction + " BTC");
+    this.$summaryBTC.text(netTransaction + " DOGE");
     this.$summaryUSD.text(netTransactionUSD);
-    this.$netTransactionBTC.text(netTransaction.toFixed(8) + " BTC");
+    this.$netTransactionBTC.text(netTransaction.toFixed(8) + " DOGE");
     this.$netTransactionUSD.text('~ ' + netTransactionUSD + ' USD');
-    this.$totalInputs.text(totalInputValue.toFixed(8) + " BTC");
+    this.$totalInputs.text(totalInputValue.toFixed(8) + " DOGE");
   };
 
   MicroEvent.mixin(ConfirmationView);

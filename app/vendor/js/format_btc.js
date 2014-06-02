@@ -12,7 +12,7 @@
       }
 
       if (units === 'btc') {
-        $(this).text(btc.toString() + " BTC");
+        $(this).text(btc.toString() + " DOGE");
       } else if (units === 'usd') {
         var conversion = btc * rate;
         $(this).text("$" + conversion.toFixed(2));

@@ -301,10 +301,10 @@ Bitcoin.Transaction = function() {
 
 Bitcoin.Transaction.prototype.addPayToPubKeyHashOutput = function(address, amount) {
   if (!Bitcoin.Address.validate(address)) {
-    throw "Invalid Bitcoin address";
+    throw "Invalid Dogecoin address";
   }
   if (amount < 0.00000001) {
-    throw "Invalid amount. Must be more than 0.00000001 BTC";
+    throw "Invalid amount. Must be more than 0.00000001 DOGE";
   }
 
   var output = '';

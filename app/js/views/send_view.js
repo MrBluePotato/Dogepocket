@@ -101,7 +101,7 @@
   };
 
   SendView.prototype.setAmountUnitsToBTC = function() {
-    this.$amountGroup.find('span.input-group-addon').text('BTC');
+    this.$amountGroup.find('span.input-group-addon').text('DOGE');
   };
 
   MicroEvent.mixin(SendView);

@@ -30,7 +30,7 @@
       if (self.amountUnits === 'btc') {
         self.amountUnits = 'usd';
         sendView.setAmountUnitsToUSD();
-        sendView.setConversion(parseFloat(self.amountBTC) + ' BTC');
+        sendView.setConversion(parseFloat(self.amountBTC) + ' DOGE');
         if (self.amountBTC > 0) {
           sendView.setAmount(calculateBTCtoUSD(self.amountBTC));
         } else {
@@ -60,10 +60,10 @@
       } else {
         if (val && !/\D$/.test(val)) {
           self.amountBTC = calculateUSDtoBTC(val);
-          sendView.setConversion(self.amountBTC + ' BTC');
+          sendView.setConversion(self.amountBTC + ' DOGE');
         } else {
           self.amountBTC = 0;
-          sendView.setConversion('0 BTC');
+          sendView.setConversion('0 DOGE');
         }
       }
     });

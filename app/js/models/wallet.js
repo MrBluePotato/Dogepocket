@@ -202,11 +202,11 @@
       } else if (/\D$/.test(amount)) {
         result.errorForAmount = "Amount must be a number";
       } else if (parseFloat(amount) < 0.00000001) {
-        result.errorForAmount = "Amount must be greater than 0.00000001 BTC";
+        result.errorForAmount = "Amount must be greater than 0.00000001 DOGE";
       } else if (transactionFee && /\D$/.test(transactionFee)) {
         result.errorForTransactionFee = "Transaction Fee must be a number";
       } else if (transactionFee && parseFloat(transactionFee) < 0.00000001) {
-        result.errorForTransactionFee = "Transaction Fee must be greater than 0.00000001 BTC";
+        result.errorForTransactionFee = "Transaction Fee must be greater than 0.00000001 DOGE";
       } else if (parseFloat(amount) > self.balanceBTC()) {
         result.errorMessage = 'Insufficient funds';
       } else if (transactionFee && parseFloat(amount) + parseFloat(transactionFee) > self.balanceBTC()) {
